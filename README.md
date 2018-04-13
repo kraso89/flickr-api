@@ -1,5 +1,7 @@
 This App is a photo grid consuming the flickr rest api.
 The Photo grid is build with lazy loading and infinite scroll (loading more images as you scroll to the bottom of the page)
+with an option for searching by photo.
+Clicking on a tag makes a search request with the raw tag value.  
 
 It uses React for a View Layer and Redux for state container.
 
