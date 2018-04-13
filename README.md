@@ -1,8 +1,20 @@
+This App is a photo grid consuming the flickr rest api.
+The Photo grid is build with lazy loading and infinite scroll (loading more images as you scroll to the bottom of the page)
+
+It uses React for a View Layer and Redux for state container.
+
+The UI is build with the help of [React-Semantic-UI](https://react.semantic-ui.com/) modules.
+
+Methods used on the api are: 
+```
+flickr.photos.search
+flickr.photos.getRecent
+flickr.photos.getInfo
+```
+Please find the full documentation here : [Flickr Api](https://www.flickr.com/services/api/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
- 
 ## Project Structure
 
 ```
@@ -13,13 +25,23 @@ flickrApi/
   public/
     index.html
     favicon.ico
+    manifest.json
   src/
+      /actions
+        index.js
+      /reducers
+        index.js
+      /utils
+        post_api_utils.js
+      /views
+        Home.js
+        PostComponent.js
+        PostDetails.js
     App.css
     App.js
-    App.test.js
-    index.css
     index.js
-    logo.svg
+    registerServiceWorker.js
+    
 ```
 
 For the project to build, **these files must exist with exact filenames**:
@@ -27,21 +49,13 @@ For the project to build, **these files must exist with exact filenames**:
 * `public/index.html` is the page template;
 * `src/index.js` is the JavaScript entry point.
 
- 
 
-Only files inside `public` can be used from `public/index.html`.<br>
-Read instructions below for using assets from JavaScript and HTML.
+## How to get it running
+To install the dependencies run `npm install`
 
-You can, however, create more top-level directories.<br>
-They will not be included in the production build so you can use them for things like documentation.
+After installation is complete run the script `npm start`
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
+This runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
