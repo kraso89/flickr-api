@@ -9,12 +9,12 @@ class PostComponent extends Component {
       loaded: false
     }
   } 
-  
+
   render() {
     const { title , farm, server, id, secret } = this.props.photo
     let source =`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}.jpg`
     return (
-      <Container fluid className="post-container">
+      <Container fluid className="post-container" style={{display:this.state.loaded ? 'block' : 'none' }}>
         <Card>
             <Image 
               key={id}
@@ -25,7 +25,7 @@ class PostComponent extends Component {
               href={this.props.info && `https://www.flickr.com/photos/${this.props.info.owner.nsid}/${id}`}
               target='_blank'
               className="photoImage"
-              style={{display:this.state.loaded ? 'block' : 'none' }}
+              
               />
           { this.props.info && <PostDetails fetchByTag={this.props.fetchByTag} info={this.props.info} /> }
         </Card>
