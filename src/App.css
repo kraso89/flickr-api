@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, #root {
+  height:auto !important;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+.gallery {
+  max-width: 1200px;
+  display:flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.controls {
+    position: sticky;
+    display:inline-block;
+    top: 0px;
+    z-index: 1;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 3px rgba(12,13,14,0.1), 0 4px 20px rgba(12,13,14,0.035), 0 1px 1px rgba(12,13,14,0.025);
+    background:rgba(255,255,255,.9);
+    padding:1em;
+}
+
+.app-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery span {
+ flex: 1 1 150px;
+  
+}
+.post-container {
+  margin:1em;
+  padding:1em;
+} 
+.header,
+.description {
+  word-wrap: break-word;
+}
+.tag {
+  cursor: pointer;
+}
+.photo-info {
+  display: inline-block
+}
+
+.example-enter {
+  opacity: 0.01;
+  width: 0px;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  width: 100px;
+  transition: 2000ms;
+}
+
+.example-leave {
+  opacity: 1;
+  width: 100px;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  width: 0px;
+  transition: 700ms;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
