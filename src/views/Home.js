@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 import { fetchPosts, resetPosts } from '../actions'
 import '../App.css'
 import 'semantic-ui-css/semantic.min.css';
-import { Input } from 'semantic-ui-react'
-import { Grid, Container, Loader, Transition } from 'semantic-ui-react'
+import { Grid, Container, Transition } from 'semantic-ui-react'
 import PostComponent from './PostComponent'
+import SearchComponent from './SearchComponent'
 
 class Home extends Component {
   constructor(props){
@@ -45,7 +45,6 @@ class Home extends Component {
     this.props.resetData();
     this.setState({searchWord:e.target.value, page:1, loading:true})
     this.props.fetchData(this.state) 
-
     //animation purposes
     setTimeout(() => {  this.setState({loading:false})} ,500)
   }
@@ -60,8 +59,7 @@ class Home extends Component {
     return (
       <Container fluid>
           <Container className="controls" fluid>
-              <Input size='large' icon='search' placeholder='Search...'  onChange={this.handleSearch.bind(this)} />
-                { this.state.loading && <Loader active size="medium" inline style={{marginLeft:'1em'}}/> }
+          <SearchComponent loading={this.state.loading} handleSearch={this.handleSearch.bind(this)} />
           </Container>
        
           <Grid padded>
