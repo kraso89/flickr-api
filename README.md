@@ -76,6 +76,7 @@ Your app is ready to be deployed!
 ### `npm test`
 
 Launches 2 suites of tests, included in App.test.js
+The tests are build using Jest and Enzyme
 
 
   
