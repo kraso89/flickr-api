@@ -37,10 +37,12 @@ flickrApi/
         post_api_utils.js
       /views
         Home.js
+        SearchComponent.js
         PostComponent.js
         PostDetails.js
     App.css
     App.js
+    App.test.js
     index.js
     registerServiceWorker.js
     
@@ -70,6 +72,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
+
+### `npm test`
+
+Launches 2 suites of tests, included in App.test.js
 
 
   
